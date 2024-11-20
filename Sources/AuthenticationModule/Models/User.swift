@@ -9,10 +9,10 @@ import Foundation
 
 
 /// Struct used to send user information to the server.
-struct User: Encodable {
+public struct User: Encodable {
     /// The email of the user.
-    let email: String
+    public let email: String
     
     /// The password of the user.
-    let password: String
+    public let password: String
 }

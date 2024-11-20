@@ -8,10 +8,10 @@
 import Foundation
 
 /// Struct used to get the access and refresh token from the server.
-struct TokenGroup: Decodable {
+public struct TokenGroup: Decodable {
     /// The access token send by the server.
-    let accessToken: String
+    public let accessToken: String
     
     /// The refresh token send by the server.
-    let refreshToken: String
+    public let refreshToken: String
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-/// View that will show the login
+/// View used by the user to log in.
 public struct LoginView: View {
     /// Default initializer.
     public init() {

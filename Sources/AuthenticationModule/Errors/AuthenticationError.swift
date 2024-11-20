@@ -9,7 +9,7 @@ import Foundation
 
 
 /// Enumeration that defines errors that can be thrown during authentication.
-enum AuthenticationError: Error {
+public enum AuthenticationError: Error {
     /// The credentials of the user are wrong.
     case invalidCredentials
     

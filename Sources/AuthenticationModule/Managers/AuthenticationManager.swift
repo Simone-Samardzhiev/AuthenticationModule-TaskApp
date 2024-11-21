@@ -21,7 +21,8 @@ public protocol AuthenticationManager: Actor {
     ///   - email: The email of the user.
     ///   - password: The password of the user.
     /// - Throws: ``AuthenticationError``
-    func login(email: String, password: String) async throws
+    /// - Returns: The refresh token send by the server.
+    func login(email: String, password: String) async throws -> String
     
     /// Method that will send the request to the server, so the user can register.
     /// - Parameters:

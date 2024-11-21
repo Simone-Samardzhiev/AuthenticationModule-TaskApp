@@ -42,12 +42,10 @@ public protocol AuthenticationManager: Actor {
     /// Method that will save the token securely with a specific.
     /// - Parameters:
     ///   - token: The token that will be saved.
-    ///   - key: The key to which the token belongs to.
     /// - Returns: True if the token was saved successfully.
-    func saveToken(token: String, key: String) async -> Bool
+    func saveToken(token: String) async -> Bool
     
     
     /// Method that will retrieve a token with a specific key.
-    /// - Parameter key: The token or nil if the it was not found.
-    func getToken(key: String) async -> String?
+    func getToken() async -> String?
 }

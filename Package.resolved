@@ -1,0 +1,15 @@
+{
+  "originHash" : "98cd533218008eba11b53d0f17065dd2321c9807be6afbfed41dd1e0c3d7cde2",
+  "pins" : [
+    {
+      "identity" : "utilities-taskapp",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Simone-Samardzhiev/Utilities-TaskApp.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "fa2f8883d0d81e09010aa2d3c8a3b07cba7a8774"
+      }
+    }
+  ],
+  "version" : 3
+}

@@ -23,7 +23,6 @@ public protocol AuthenticationViewModel: Observable {
     /// Variable holding the entered password.
     var password: String { get }
     
-    
     /// Variable holding the entered confirm password.
     var confirmPassword: String { get }
     

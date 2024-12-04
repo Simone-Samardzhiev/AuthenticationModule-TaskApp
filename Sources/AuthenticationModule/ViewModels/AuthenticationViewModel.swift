@@ -10,6 +10,7 @@ import Utilities
 
 
 /// Protocol used to create a view model that will update the view when the user authenticate.
+@MainActor
 public protocol AuthenticationViewModel: Observable {
     /// Manager used to manage all authentication operations.
     var manager: AuthenticationManager { get }

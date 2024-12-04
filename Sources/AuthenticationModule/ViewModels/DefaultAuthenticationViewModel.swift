@@ -11,6 +11,7 @@ import Utilities
 
 /// The default view model used to authenticate,
 @Observable
+@MainActor
 public class DefaultAuthenticationViewModel: AuthenticationViewModel {
     @ObservationIgnored
     public var manager: AuthenticationManager
@@ -34,6 +35,7 @@ public class DefaultAuthenticationViewModel: AuthenticationViewModel {
     }
     
     public func login() async {
+        state = .loading("Logging in")
         do {
             let token = try await manager.login(email: email, password: password)
             if await !manager.saveToken(token: token) {
@@ -52,6 +54,7 @@ public class DefaultAuthenticationViewModel: AuthenticationViewModel {
     }
     
     public func register() async {
+        state = .loading("Registering")
         do {
             try await manager.register(email: email, password: password, confirmPassword: confirmPassword)
         } catch let error as AuthenticationError {

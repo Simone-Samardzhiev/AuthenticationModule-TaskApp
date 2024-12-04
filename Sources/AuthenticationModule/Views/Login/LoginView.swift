@@ -22,7 +22,9 @@ public struct LoginView: View {
             VStack(spacing: 35) {
                 EmailField($viewModel.email)
                 PasswordField(text: $viewModel.password, message: "Password")
+                LoginButton()
             }
+            .environment(viewModel)
             .padding(.horizontal, 35)
             .navigationTitle("Login")
         }

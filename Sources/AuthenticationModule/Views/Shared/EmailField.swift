@@ -8,10 +8,14 @@
 import SwiftUI
 
 
+/// Field used to enter the email.
 struct EmailField: View {
+    /// The email that will be edited.
     @Binding var text: String
     
-    public init(_ text: Binding<String>) {
+    /// Default initializer.
+    /// - Parameter text: The text that will be edited.
+    init(_ text: Binding<String>) {
         self._text = text
     }
     

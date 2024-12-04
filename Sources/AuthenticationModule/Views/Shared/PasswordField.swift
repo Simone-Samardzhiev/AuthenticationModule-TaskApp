@@ -8,12 +8,22 @@
 import SwiftUI
 
 
+/// Field used to enter the password.
 struct PasswordField: View {
+    /// The password that will be entered.
     @Binding var text: String
+    
+    /// The message that will be displayed.
     let message: String
+    
+    /// Variable used to show and hide the password.
     @State var show: Bool
     
-    public init(text: Binding<String>, message: String) {
+    /// Default initializer.
+    /// - Parameters:
+    ///   - text: The password that will be changed.
+    ///   - message: The message that will displayed.
+    init(text: Binding<String>, message: String) {
         self._text = text
         self.message = message
         self.show = false

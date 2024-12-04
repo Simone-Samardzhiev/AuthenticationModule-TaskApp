@@ -36,6 +36,9 @@ public class DefaultAuthenticationViewModel: AuthenticationViewModel {
     public func login() async {
         do {
             let token = try await manager.login(email: email, password: password)
+            if await !manager.saveToken(token: token) {
+                state = .failure("Unknown error")
+            }
         } catch let error as AuthenticationError {
             switch error {
             case .invalidCredentials:

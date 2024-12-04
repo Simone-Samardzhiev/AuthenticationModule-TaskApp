@@ -16,7 +16,7 @@ struct EmailField: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             TextField("Email", text: $text)
             Rectangle()
                 .frame(height: 1)

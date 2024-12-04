@@ -19,8 +19,9 @@ public struct LoginView: View {
     public var body: some View {
         @Bindable var viewModel = viewModel
         NavigationStack {
-            VStack {
+            VStack(spacing: 35) {
                 EmailField($viewModel.email)
+                PasswordField(text: $viewModel.password, message: "Password")
             }
             .padding(.horizontal, 35)
             .navigationTitle("Login")

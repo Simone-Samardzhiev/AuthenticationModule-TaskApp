@@ -11,7 +11,10 @@ import SwiftUI
 struct ButtonModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
+            .font(.title)
+            .foregroundStyle(Color.black)
             .padding()
             .background(Color.blue)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
     }
 }

@@ -48,8 +48,14 @@ public class DefaultAuthenticationViewModel: AuthenticationViewModel {
             default:
                 state = .failure("Unknown error")
             }
+#if DEBUG
+            print(error)
+#endif
         } catch {
             state = .failure("Unknown error")
+#if DEBUG
+            print(error)
+#endif
         }
     }
     
@@ -66,8 +72,14 @@ public class DefaultAuthenticationViewModel: AuthenticationViewModel {
             default:
                 state = .failure("Unknown error")
             }
+#if DEBUG
+            print(error)
+#endif
         } catch {
             state = .failure("Unknown error")
+#if DEBUG
+            print(error)
+#endif
         }
     }
     

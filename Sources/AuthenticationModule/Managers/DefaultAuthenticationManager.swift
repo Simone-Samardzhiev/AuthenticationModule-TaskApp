@@ -24,7 +24,7 @@ public actor DefaultAuthenticationManager: AuthenticationManager {
     
     public func login(email: String, password: String) async throws -> String {
         // Construct the URL for the login endpoint, throws error if the URL is invalid
-        guard let url = URL(string: "https://localhost:8080/users/login") else {
+        guard let url = URL(string: "http://localhost:8080/users/login") else {
             throw AuthenticationError.invalidURL
         }
         
@@ -68,7 +68,7 @@ public actor DefaultAuthenticationManager: AuthenticationManager {
         }
         
         // Construct the URL for register endpoint, throws error if the URL is invalid
-        guard let url = URL(string: "https://localhost:8080/users/register") else {
+        guard let url = URL(string: "http://localhost:8080/users/register") else {
             throw AuthenticationError.invalidURL
         }
         
@@ -105,7 +105,7 @@ public actor DefaultAuthenticationManager: AuthenticationManager {
     // Make the network request and await response
     public func refreshTokens(refreshToken: String) async throws -> TokenGroup {
         // Construct the URL for register endpoint, throws error if the URL is invalid
-        guard let url = URL(string: "https://localhost:8080/refresh") else {
+        guard let url = URL(string: "http://localhost:8080/refresh") else {
             throw AuthenticationError.invalidURL
         }
         
